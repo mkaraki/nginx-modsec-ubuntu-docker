@@ -19,3 +19,6 @@ RUN sed -i 's/^SecRuleEngine .*/SecRuleEngine On/' /etc/nginx/modsecurity.conf &
 EXPOSE 80/tcp
 EXPOSE 443/tcp
 EXPOSE 443/udp
+
+STOPSIGNAL SIGQUIT
+CMD ["nginx", "-g", "daemon off;"]
