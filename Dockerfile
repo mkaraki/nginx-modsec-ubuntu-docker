@@ -9,7 +9,7 @@ RUN sed -i 's/^SecRuleEngine .*/SecRuleEngine On/' /etc/nginx/modsecurity.conf &
     sed -i 's/^#include /include /' /etc/nginx/modsecurity_includes.conf &&\
     echo "modsecurity on;" >> /etc/nginx/conf.d/modsecurity.conf &&\
     echo "modsecurity_rules_file /etc/nginx/modsecurity_includes.conf;" >> /etc/nginx/conf.d/modsecurity.conf &&\
-    sed -i 's/^#IncludeOptional /Include /' /usr/share/modsecurity-crs/owasp-crs.load &&\
+    sed -i 's/^IncludeOptional /Include /' /usr/share/modsecurity-crs/owasp-crs.load &&\
     sed -i 's/# server_tokens off;$/server_tokens off;/' /etc/nginx/nginx.conf &&\
     unlink /etc/nginx/sites-enabled/default
 
