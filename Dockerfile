@@ -1,5 +1,6 @@
 FROM ubuntu:noble@sha256:c35e29c9450151419d9448b0fd75374fec4fff364a27f176fb458d472dfc9e54
 
+# IMPORTANT NOTE: this renovate check will fail due to renovate didn't support ubuntu package versioning.
 # renovate-ubuntu: suite=noble depName=nginx-full
 ARG NGINX_FULL_VERSION="1.24.0-2ubuntu7.5"
 
