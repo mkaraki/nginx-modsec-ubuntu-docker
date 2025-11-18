@@ -1,8 +1,14 @@
 FROM ubuntu:noble
 
+# renovate-ubuntu: suite=noble depName=nginx-full
+ARG NGINX_FULL_VERSION="1.24.0-2ubuntu7.5"
+
+# renovate-ubuntu: suite=noble depName=libnginx-mod-http-modsecurity 
+ARG LIBNGINX_MOD_SECURITY_VERSION="1.0.3-1build3"
+
 RUN apt-get update && apt-get upgrade -y && apt-get install -y \
-    nginx-full \
-    libnginx-mod-http-modsecurity \
+    nginx-full="${NGINX_FULL_VERSION}" \
+    libnginx-mod-http-modsecurity="${LIBNGINX_MOD_SECURITY_VERSION}" \
     && apt-get clean && rm -rf /var/lib/apt/lists/*
 
 RUN sed -i 's/^SecRuleEngine .*/SecRuleEngine On/' /etc/nginx/modsecurity.conf &&\
