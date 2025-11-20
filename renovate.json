@@ -24,6 +24,15 @@
             "datasourceTemplate": "deb"
         }
     ],
+    "packageRules": [
+        {
+            "matchDatasources": ["docker"],
+            "matchPackageNames": ["debian", "ubuntu"],
+            "matchUpdateTypes": ["digest"],
+            "automerge": true,
+            "automergeType": "branch" 
+        }
+    ],
     "assignees": [
         "mkaraki"
     ],
