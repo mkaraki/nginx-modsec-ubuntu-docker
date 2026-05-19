@@ -1,7 +1,7 @@
 FROM debian:trixie-slim@sha256:cedb1ef40439206b673ee8b33a46a03a0c9fa90bf3732f54704f99cb061d2c5a
 
 # renovate-debian: suite=trixie depName=nginx-full
-ARG NGINX_FULL_VERSION="1.26.3-3+deb13u2"
+ARG NGINX_FULL_VERSION="1.26.3-3+deb13u4"
 
 # renovate-debian: suite=trixie depName=libnginx-mod-http-modsecurity 
 ARG LIBNGINX_MOD_SECURITY_VERSION="1.0.3-2+b2"
