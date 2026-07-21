@@ -1,8 +1,10 @@
 FROM debian:trixie-slim@sha256:4e401d95de7083948053197a9c3913343cd06b706bf15eb6a0c3ccd26f436a0e
 
+# Version info: https://packages.debian.org/trixie/nginx-full
 # renovate-debian: suite=trixie depName=nginx-full
-ARG NGINX_FULL_VERSION="1.26.3-3+deb13u6"
+ARG NGINX_FULL_VERSION="1.26.3-3+deb13u7"
 
+# Version info: https://packages.debian.org/trixie/libnginx-mod-http-modsecurity
 # renovate-debian: suite=trixie depName=libnginx-mod-http-modsecurity 
 ARG LIBNGINX_MOD_SECURITY_VERSION="1.0.3-2+b2"
 
