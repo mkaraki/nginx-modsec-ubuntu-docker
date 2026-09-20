@@ -1,4 +1,4 @@
-FROM ubuntu:resolute@sha256:cd21a4f68a617580279d4b091cb18e3af9fa8a87500665f0ae5f7f757d17d367
+FROM ubuntu:resolute@sha256:da6fc2be547864451aa253836dd926da33623312df4a9a243e35dc877c378a78
 
 # IMPORTANT NOTE: this renovate check will fail due to renovate didn't support ubuntu package versioning.
 # Version info: https://packages.ubuntu.com/resolute/nginx-full
