@@ -5,8 +5,7 @@
             "matchDatasources": ["docker"],
             "matchPackageNames": ["debian", "ubuntu"],
             "matchUpdateTypes": ["digest"],
-            "automerge": true,
-            "automergeType": "branch" 
+            "automerge": true
         },
         {
             "groupName": "GitHub Artifact Actions",
