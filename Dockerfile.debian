@@ -5,7 +5,7 @@ FROM debian:trixie-slim@sha256:020c0d20b9880058cbe785a9db107156c3c75c2ac944a6aa7
 
 RUN apt-get update && apt-get upgrade -y && apt-get install -y \
     nginx-full=1.26.3-3+deb13u9 \
-    libnginx-mod-http-modsecurity=1.0.3-2 \
+    libnginx-mod-http-modsecurity=1.0.3-2+b2 \
     && apt-get clean && rm -rf /var/lib/apt/lists/*
 
 RUN sed -i 's/^SecRuleEngine .*/SecRuleEngine On/' /etc/nginx/modsecurity.conf &&\
