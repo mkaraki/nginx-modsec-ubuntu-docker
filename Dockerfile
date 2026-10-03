@@ -1,17 +1,8 @@
 FROM ubuntu:resolute@sha256:cd21a4f68a617580279d4b091cb18e3af9fa8a87500665f0ae5f7f757d17d367
 
-# IMPORTANT NOTE: this renovate check will fail due to renovate didn't support ubuntu package versioning.
-# Version info: https://packages.ubuntu.com/resolute/nginx-full
-# renovate-ubuntu: suite=noble depName=nginx-full
-ARG NGINX_FULL_VERSION="1.28.3-2ubuntu1.8"
-
-# Version info: https://packages.ubuntu.com/resolute/libnginx-mod-http-modsecurity
-# renovate-ubuntu: suite=noble depName=libnginx-mod-http-modsecurity 
-ARG LIBNGINX_MOD_SECURITY_VERSION="1.0.3-2build6"
-
 RUN apt-get update && apt-get upgrade -y && apt-get install -y \
-    nginx-full="${NGINX_FULL_VERSION}" \
-    libnginx-mod-http-modsecurity="${LIBNGINX_MOD_SECURITY_VERSION}" \
+    nginx-full \
+    libnginx-mod-http-modsecurity \
     && apt-get clean && rm -rf /var/lib/apt/lists/*
 
 RUN sed -i 's/^SecRuleEngine .*/SecRuleEngine On/' /etc/nginx/modsecurity.conf &&\
