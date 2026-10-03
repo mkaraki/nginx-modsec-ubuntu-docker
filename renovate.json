@@ -12,7 +12,9 @@
             "groupName": "GitHub Artifact Actions",
             "matchManagers": [
               "github-actions"
-            ]
+            ],
+            "automerge": true,
+            "automergeType": "pr"
         },
         {
             "matchFileNames": ["Dockerfile"],
@@ -21,7 +23,8 @@
                 "https://deb.debian.org/debian-security?suite=trixie&components=main,contrib,non-free&binaryArch=amd64",
                 "https://deb.debian.org/debian?suite=trixie&components=main,contrib,non-free&binaryArch=amd64"
             ],
-            "automerge": true
+            "automerge": true,
+            "automergeType": "pr"
         }
     ],
     "assignees": [
